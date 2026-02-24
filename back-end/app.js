@@ -40,6 +40,17 @@ app.get('/messages', async (req, res) => {
   }
 })
 
+app.get("/about", (req, res) => {
+  res.json({
+    name: "Abdullah",
+    bio: [
+      "Hi, I'm Abdullah. I study Interactive Media at NYU Abu Dhabi. This is my study abroad semester at NYU. I am absolutely enjoying the wide variety of classes I am being able to take.",
+      "I'm interested in UX, product design, and building digital experiences. However, I am really looking forward to this course as this is an opportunity to brush up my technical (coding) skills and version control skills, which are both important for my future career.",
+    ],
+    image: "https://cdnbeta.thegazelle.org/gazelle/2023/staff/Staff_Img_Fall2023/586A3CC6-CBDF-4567-A921-BD3CA9508876%20-%20Muhammad%20Abdullah%20as%20Sami%20an%20Noor.JPG?format=webp&quality=75&width=3840"
+  });
+});
+
 // a route to handle fetching a single message by its id
 app.get('/messages/:messageId', async (req, res) => {
   // load all messages from database
